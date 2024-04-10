@@ -63,3 +63,18 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "chore"
+
+  - package-ecosystem: docker
+    directory: /test/pubsub/fake-subscriber
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /vendor/github.com/docker/distribution
+    schedule:
+      interval: daily
+
+  - package-ecosystem: pip
+    directory: /vendor/go.opentelemetry.io/otel
+    schedule:
+      interval: daily
